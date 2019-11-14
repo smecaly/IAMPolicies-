@@ -1,0 +1,21 @@
+{
+    "Version": "2012-10-17",
+    "Statement": {
+        "Effect": "Deny",
+        "Action": [
+            "iam:CreatePolicy",
+            "iam:CreatePolicyVersion",
+            "iam:DeletePolicy",
+            "iam:DeletePolicyVersion",
+            "iam:GetPolicy",
+            "iam:AttachGroupPolicy",
+            "iam:GetPolicyVersion",
+            "iam:CreateGroup",
+            "iam:CreateUser",
+            "iam:ListPolicies",
+            "iam:ListPolicyVersions",
+            "iam:SetDefaultPolicyVersion"
+        ],
+        "Resource": "*"
+    }
+}
