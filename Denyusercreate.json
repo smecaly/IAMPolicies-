@@ -1,0 +1,27 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "TagUsersWithOnlyTheseTags",
+      "Effect": "Deny",
+      "Action": [
+        "iam:CreateUser"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "StringEqualsIfExists": {
+          "aws:RequestTag/Department": [
+            "Development"
+          ],
+          "aws:RequestTag/JobFunction": "Employee"
+        },
+        "ForAllValues:StringEquals": {
+          "aws:TagKeys": [
+            "Department",
+            "JobFunction"
+          ]
+        }
+      }
+    }
+  ]
+}
